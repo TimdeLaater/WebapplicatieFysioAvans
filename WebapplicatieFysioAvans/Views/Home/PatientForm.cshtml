@@ -1,0 +1,40 @@
+﻿@model DomainModel.Models.PatientModel
+
+
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>PatientForm</title>
+</head>
+<body>
+    <form asp-action="PatientForm" method="post">
+
+        <div asp-validation-summary="All"></div>
+        <div>
+            <label asp-for="Name">Naam</label>
+            <input asp-for="Name" />
+        </div>
+        <div>
+            <label asp-for="Date">Geboortedatum:</label>
+            <input asp-for="Date" />
+        </div>
+        <div>
+            <label asp-for="Email">Emailadress:</label>
+            <input asp-for="Email" />
+        </div>
+        <div>
+            <label asp-for="Gender">Geslacht:</label>
+            <input asp-for="Gender" />
+        </div>
+        <div>
+            <label asp-for="PatientNr">PatientenNr:</label>
+            <input asp-for="PatientNr" />
+        </div>
+        <div>
+            <label asp-for="PhoneNr">Telefoonnummer:</label>
+            <input asp-for="PhoneNr" />
+        </div>
+        <button type="submit">Submit PatientForm</button>
+    </form>
+
+</body>

@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model IEnumerable<DomainModel.Models.PatientModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div>
+    <h1 class="display-4">Welcome</h1>
+    <button type="button" onclick="location.href='@Url.Action("PatientForm")'">Nieuwe Patiënt</button>
+</div>
+<div>
+    <h4>Patiënten</h4>
+    <hr />
+    <table cellpadding="5" cellspacing="0">
+        <tr>
+            <th>Naam</th>
+            <th>Email</th>
+            <th>Geboorte datum</th>
+            <th>Telefoonnummer</th>
+            <th>Geslacht</th>
+            <th>Patiëntennummer</th>
+
+
+
+
+        </tr>
+        @foreach (DomainModel.Models.PatientModel patient in Model)
+        {
+    <tr>
+        <td>@patient.Name</td>
+        <td>@patient.Email</td>
+        <td>@patient.Date</td>
+        <td>@patient.PhoneNr</td>
+        <td>@patient.Gender</td>
+        <td>@patient.PatientNr</td>
+
+
+
+
+
+
+    </tr>
+            }
+    </table>
+</div>
