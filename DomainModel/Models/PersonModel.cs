@@ -9,7 +9,8 @@ namespace DomainModel.Models
 {
     public abstract class PersonModel
     {
-        [Required(ErrorMessage = "Voer u naam in")]
+        //public int Id { get; set; }
+        [Required(ErrorMessage = "Voer u naam in"), MaxLength(255)]
         public string Name { get; set; }
         [Required(ErrorMessage = "Voer u Email in")]
         [BindProperty, DataType(DataType.EmailAddress)]

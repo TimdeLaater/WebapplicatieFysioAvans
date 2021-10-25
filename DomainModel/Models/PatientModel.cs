@@ -16,12 +16,15 @@ namespace DomainModel.Models
         [Required(ErrorMessage = "Voer u geboortedatum in")]
         [BindProperty, DataType(DataType.Date)]
         public string Date { get; set; }
+        [Required(ErrorMessage = "Voer u Studenten/Personeelsnummer in")]
+        public int SchoolNr { get; set; }
         [Required(ErrorMessage = "Voer u Patientennummer in")]
-
+       
         public int PatientNr { get; set; }
         [Required(ErrorMessage = "Voer u geslacht in")]
 
         public string Gender { get; set; }
+        public PatientFileModel PatientDossier { get; set; }
 
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {

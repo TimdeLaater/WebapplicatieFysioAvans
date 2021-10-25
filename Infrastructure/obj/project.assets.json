@@ -1537,6 +1537,24 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "DomainServices/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "DomainModel": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.10",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.10"
+        },
+        "compile": {
+          "bin/placeholder/DomainServices.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DomainServices.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -5810,11 +5828,17 @@
       "type": "project",
       "path": "../DomainModel/DomainModel.csproj",
       "msbuildProject": "../DomainModel/DomainModel.csproj"
+    },
+    "DomainServices/1.0.0": {
+      "type": "project",
+      "path": "../DomainServices/DomainServices.csproj",
+      "msbuildProject": "../DomainServices/DomainServices.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
       "DomainModel >= 1.0.0",
+      "DomainServices >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.10",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.10",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.10",
@@ -5850,6 +5874,9 @@
           "projectReferences": {
             "C:\\Users\\tdela\\source\\repos\\WebapplicatieFysioAvans\\DomainModel\\DomainModel.csproj": {
               "projectPath": "C:\\Users\\tdela\\source\\repos\\WebapplicatieFysioAvans\\DomainModel\\DomainModel.csproj"
+            },
+            "C:\\Users\\tdela\\source\\repos\\WebapplicatieFysioAvans\\DomainServices\\DomainServices.csproj": {
+              "projectPath": "C:\\Users\\tdela\\source\\repos\\WebapplicatieFysioAvans\\DomainServices\\DomainServices.csproj"
             }
           }
         }
@@ -5900,7 +5927,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

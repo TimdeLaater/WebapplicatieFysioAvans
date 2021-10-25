@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc;
 namespace DomainModel.Models
 {
-    public class StudentModel : PersonModel
+    public class StudentModel : TeacherModel
     {
         [Required(ErrorMessage = "Voer u Studentnummer in")]
         public int StudentNr { get; set; }

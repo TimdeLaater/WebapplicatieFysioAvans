@@ -7,6 +7,7 @@ namespace DomainModel.Models
 {
     public class TreatmentPlanModel
     {
+        public int Id { get; set; }
         public int AmountOfTreaments { get; set; }
         public string TreatmentTime { get; set; }
     }

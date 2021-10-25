@@ -19,6 +19,7 @@ namespace Infrastructure
         {
 
         }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);

@@ -83,18 +83,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\tdela\\source\\repos\\WebapplicatieFysioAvans\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\tdela\\source\\repos\\WebapplicatieFysioAvans\\DomainServices\\DomainServices.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tdela\\source\\repos\\WebapplicatieFysioAvans\\Infrastructure\\Infrastructure.csproj",
-        "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\tdela\\source\\repos\\WebapplicatieFysioAvans\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\tdela\\source\\repos\\WebapplicatieFysioAvans\\DomainServices\\DomainServices.csproj",
+        "projectName": "DomainServices",
+        "projectPath": "C:\\Users\\tdela\\source\\repos\\WebapplicatieFysioAvans\\DomainServices\\DomainServices.csproj",
         "packagesPath": "C:\\Users\\tdela\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tdela\\source\\repos\\WebapplicatieFysioAvans\\Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\tdela\\source\\repos\\WebapplicatieFysioAvans\\DomainServices\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\tdela\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -159,11 +159,97 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\tdela\\source\\repos\\WebapplicatieFysioAvans\\Infrastructure\\Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\tdela\\source\\repos\\WebapplicatieFysioAvans\\Infrastructure\\Infrastructure.csproj",
+        "projectName": "Infrastructure",
+        "projectPath": "C:\\Users\\tdela\\source\\repos\\WebapplicatieFysioAvans\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\tdela\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tdela\\source\\repos\\WebapplicatieFysioAvans\\Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\tdela\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\tdela\\source\\repos\\WebapplicatieFysioAvans\\DomainModel\\DomainModel.csproj": {
+                "projectPath": "C:\\Users\\tdela\\source\\repos\\WebapplicatieFysioAvans\\DomainModel\\DomainModel.csproj"
+              },
+              "C:\\Users\\tdela\\source\\repos\\WebapplicatieFysioAvans\\DomainServices\\DomainServices.csproj": {
+                "projectPath": "C:\\Users\\tdela\\source\\repos\\WebapplicatieFysioAvans\\DomainServices\\DomainServices.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
