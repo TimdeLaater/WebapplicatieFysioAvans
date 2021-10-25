@@ -10,6 +10,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Infrastructure.Data;
+using DomainServices;
 
 namespace WebapplicatieFysioAvans
 {
@@ -28,6 +30,7 @@ namespace WebapplicatieFysioAvans
             services.AddControllersWithViews();
             services.AddDbContext<FysioDBContext>(options => options.UseSqlServer(
                 Configuration.GetConnectionString("Default")));
+            services.AddScoped<IPatientRepo, SQLPatientRepo>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

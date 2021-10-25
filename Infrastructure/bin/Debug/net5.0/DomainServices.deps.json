@@ -31,11 +31,9 @@
   },
   "targets": {
     ".NETCoreApp,Version=v5.0": {
-      "WebapplicatieFysioAvans/1.0.0": {
+      "DomainServices/1.0.0": {
         "dependencies": {
           "DomainModel": "1.0.0",
-          "DomainServices": "1.0.0",
-          "Infrastructure": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.10",
           "Microsoft.EntityFrameworkCore.Design": "5.0.10",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.10",
@@ -323,10 +321,10 @@
           "WindowsBase": "4.0.0.0"
         },
         "runtime": {
-          "WebapplicatieFysioAvans.dll": {}
+          "DomainServices.dll": {}
         },
         "compile": {
-          "WebapplicatieFysioAvans.dll": {}
+          "DomainServices.dll": {}
         }
       },
       "Humanizer.Core/2.8.26": {
@@ -1328,33 +1326,6 @@
         },
         "compile": {
           "DomainModel.dll": {}
-        }
-      },
-      "DomainServices/1.0.0": {
-        "dependencies": {
-          "DomainModel": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "5.0.10",
-          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.10"
-        },
-        "runtime": {
-          "DomainServices.dll": {}
-        },
-        "compile": {
-          "DomainServices.dll": {}
-        }
-      },
-      "Infrastructure/1.0.0": {
-        "dependencies": {
-          "DomainModel": "1.0.0",
-          "DomainServices": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "5.0.10",
-          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.10"
-        },
-        "runtime": {
-          "Infrastructure.dll": {}
-        },
-        "compile": {
-          "Infrastructure.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
@@ -3046,7 +3017,7 @@
     }
   },
   "libraries": {
-    "WebapplicatieFysioAvans/1.0.0": {
+    "DomainServices/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -3731,16 +3702,6 @@
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
     "DomainModel/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DomainServices/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

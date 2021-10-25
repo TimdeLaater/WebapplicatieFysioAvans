@@ -9,6 +9,7 @@
       "Infrastructure/1.0.0": {
         "dependencies": {
           "DomainModel": "1.0.0",
+          "DomainServices": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.10",
           "Microsoft.EntityFrameworkCore.Design": "5.0.10",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.10",
@@ -973,6 +974,16 @@
         "runtime": {
           "DomainModel.dll": {}
         }
+      },
+      "DomainServices/1.0.0": {
+        "dependencies": {
+          "DomainModel": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.10",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.10"
+        },
+        "runtime": {
+          "DomainServices.dll": {}
+        }
       }
     }
   },
@@ -1662,6 +1673,11 @@
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
     "DomainModel/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DomainServices/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

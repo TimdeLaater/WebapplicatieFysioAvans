@@ -19,6 +19,10 @@ namespace Infrastructure
         {
 
         }
+        public FysioDBContext()
+        {
+
+        }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

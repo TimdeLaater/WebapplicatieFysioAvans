@@ -55,3 +55,9 @@ C:\Users\tdela\source\repos\WebapplicatieFysioAvans\Infrastructure\obj\Debug\net
 C:\Users\tdela\source\repos\WebapplicatieFysioAvans\Infrastructure\obj\Debug\net5.0\ref\Infrastructure.dll
 C:\Users\tdela\source\repos\WebapplicatieFysioAvans\Infrastructure\obj\Debug\net5.0\Infrastructure.pdb
 C:\Users\tdela\source\repos\WebapplicatieFysioAvans\Infrastructure\obj\Debug\net5.0\Infrastructure.genruntimeconfig.cache
+C:\Users\tdela\source\repos\WebapplicatieFysioAvans\Infrastructure\bin\Debug\net5.0\DomainServices.deps.json
+C:\Users\tdela\source\repos\WebapplicatieFysioAvans\Infrastructure\bin\Debug\net5.0\DomainServices.runtimeconfig.json
+C:\Users\tdela\source\repos\WebapplicatieFysioAvans\Infrastructure\bin\Debug\net5.0\DomainServices.runtimeconfig.dev.json
+C:\Users\tdela\source\repos\WebapplicatieFysioAvans\Infrastructure\bin\Debug\net5.0\DomainServices.exe
+C:\Users\tdela\source\repos\WebapplicatieFysioAvans\Infrastructure\bin\Debug\net5.0\DomainServices.dll
+C:\Users\tdela\source\repos\WebapplicatieFysioAvans\Infrastructure\bin\Debug\net5.0\DomainServices.pdb

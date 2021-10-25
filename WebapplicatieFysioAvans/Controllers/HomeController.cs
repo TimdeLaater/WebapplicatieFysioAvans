@@ -1,4 +1,5 @@
 ﻿using DomainModel.Models;
+using DomainServices;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -13,8 +14,9 @@ namespace WebapplicatieFysioAvans.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IPatientRepo _patientRepo;
         private List<PatientModel> patients;
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IPatientRepo patientRepo)
         {
             patients = new List<PatientModel>()
             {
@@ -22,21 +24,14 @@ namespace WebapplicatieFysioAvans.Controllers
                 {
                 Name = "Tim de Laater"
                 },
-                new PatientModel()
-                {
-                Name = "Test"
-                },
-                new PatientModel()
-                {
-                Name = "Test2"
-                }
             };
             _logger = logger;
+            _patientRepo = patientRepo;
         }
 
         public IActionResult Index()
         {
-            return View(patients);
+            return View(_patientRepo.Get().ToList());
         }
 
         public IActionResult Privacy()
@@ -53,10 +48,19 @@ namespace WebapplicatieFysioAvans.Controllers
         {
             if (ModelState.IsValid)
             {
-                patients.Add(patient);
-                return View("Index",patients);
+                patient.PatientDossier = new PatientFileModel();
+                patient.PatientDossier.Comments = new List<CommentModel>();
+
+                if (_patientRepo.Get().Exists(t => t?.Email == patient.Email))
+                {
+                    ModelState.AddModelError(String.Empty, "De email bestaat al.");
+                    return View();
+                }
+
+                _patientRepo.Create(patient);
+                return RedirectToAction(nameof(Index));
             }
-            return View();
+            return View(patient);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

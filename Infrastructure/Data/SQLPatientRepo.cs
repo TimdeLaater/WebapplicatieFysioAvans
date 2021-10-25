@@ -10,42 +10,82 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Data
 {
-    class SQLPatientRepo : IRepo<PatientModel>
+   public class SQLPatientRepo : IPatientRepo
         
     {
         FysioDBContext _dbContext = new();
+
         public SQLPatientRepo(FysioDBContext dbContext)
         {
             _dbContext = dbContext;
         }
+        public SQLPatientRepo()
+        {
+
+        }
         public void Create(PatientModel entity)
         {
-            throw new NotImplementedException();
+            _dbContext.Add(entity);
+            _dbContext.SaveChanges();
         }
 
         public List<PatientModel> Get()
         {
-            throw new NotImplementedException();
+            return _dbContext.Patient
+                .Include(patient => patient.PatientDossier)
+                    .ThenInclude(patient => patient.Treatments)
+                        .ThenInclude(treatment => treatment.TreatmentBy)
+                .Include(patient => patient.PatientDossier.Comments)
+                                .Include(patient => patient.PatientDossier.Therapist)
+                                                .Include(patient => patient.PatientDossier.IntakeDoneBy)
+                     .Include(patient => patient.PatientDossier.IntakeSupervision)
+                    .Include(patient => patient.PatientDossier.TreatmentPlan)
+                      .ToList();
+
         }
 
-        public PatientModel Get(int id)
+        public PatientModel Get(string Email)
         {
-            throw new NotImplementedException();
+            var patient = _dbContext.Patient.Where(x => x.Email == Email)
+        .Include(patient => patient.PatientDossier)
+                    .ThenInclude(patient => patient.Treatments)
+                        .ThenInclude(treatment => treatment.TreatmentBy)
+                .Include(patient => patient.PatientDossier.Comments)
+                      .Include(patient => patient.PatientDossier.Therapist)
+                      .Include(patient => patient.PatientDossier.IntakeDoneBy)
+                     .Include(patient => patient.PatientDossier.IntakeSupervision)
+                    .Include(patient => patient.PatientDossier.TreatmentPlan)
+                    .First();
+            return patient;
+
         }
+       
 
         public PatientModel Get(PatientModel entity)
         {
-            throw new NotImplementedException();
+            return _dbContext.Patient.Find(entity.Email);
         }
 
-        public void Remove(int id)
+      
+
+        public void Update(PatientModel entity, string email)
         {
-            throw new NotImplementedException();
+            _dbContext.Update(entity);
+            _dbContext.SaveChanges();
         }
 
-        public void Update(PatientModel entity, int id)
+        public void Remove(string email)
         {
-            throw new NotImplementedException();
+            _dbContext.Remove(_dbContext.Patient.Find(email));
+            _dbContext.SaveChanges();
+        }
+
+        public void UpdatePatientDossier(PatientModel entity, string email)
+        {
+            PatientModel patient = Get(email);
+            patient.PatientDossier = entity.PatientDossier;
+            _dbContext.Update(patient);
+            _dbContext.SaveChanges();
         }
     }
 }

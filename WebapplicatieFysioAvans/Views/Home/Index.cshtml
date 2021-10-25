@@ -27,15 +27,25 @@
 
 
         </tr>
-        @foreach (DomainModel.Models.PatientModel patient in Model)
+        @foreach (var item in Model)
         {
     <tr>
-        <td>@patient.Name</td>
-        <td>@patient.Email</td>
-        <td>@patient.Date</td>
-        <td>@patient.PhoneNr</td>
-        <td>@patient.Gender</td>
-        <td>@patient.PatientNr</td>
+        <td>@Html.DisplayFor(modelItem => item.Name)</td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PhoneNr)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PatientNr)
+        </td>
 
 
 
